@@ -66,4 +66,8 @@ public  class PessoaDTO extends DTO{
         dto.sexoPessoa = pessoa.getSexo();
         return dto;
     }
+    @Override
+    public String toString() {
+        return "Nome: " + nomePessoa + ", CPF: " + cpfPessoa + ", RG: " + rgPessoa + ", Número: " + numeroPessoa + ", Rua: " + ruaPessoa;
+    }
 }

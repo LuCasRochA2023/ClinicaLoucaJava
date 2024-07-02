@@ -1,5 +1,7 @@
 package entidades.dao;
 
+import entidades.Login;
+
 import java.util.List;
 
 public interface InterfaceDao {
@@ -12,4 +14,6 @@ public interface InterfaceDao {
     public default void atualiza(Object entidade) {
         Padrao.getInstance().atualiza(entidade);
     }
+
+
 }

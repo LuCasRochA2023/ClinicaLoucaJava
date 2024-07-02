@@ -181,19 +181,15 @@ public class CampoPrincipal extends JPanel {
                 generoSelecionado = "Feminino";
             }
             dto.sexoPessoa = (generoSelecionado);
-            Pessoa p = dto.builder();
-            Padrao padrao = new Padrao();
-            padrao.salvar(p);
+
+
+            controller.salvar(dto);
+
 
         });
 
     }
-    public void listar(){
-        Pessoa pessoaa = new Pessoa();
-        for (Pessoa pessoa: Padrao.listar(campoNome.getText())){
-            pessoa.getNome();
-        }
-    }
+
     public CampoPrincipal() {
 
 
@@ -348,7 +344,6 @@ public class CampoPrincipal extends JPanel {
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(botaoOk, gc);
 
-        PessoaController pessoaController = new PessoaController();
         Salvar();
 
     }

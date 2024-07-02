@@ -3,14 +3,13 @@ package controller;
 import dto.DTO;
 import dto.PessoaDTO;
 import entidades.Pessoa;
-import entidades.dao.InterfaceDao;
 import entidades.dao.Padrao;
 import entidades.dao.PessoaDAO;
 
 import java.util.List;
 
 public class PessoaController implements Controller {
-    Padrao pessoaDao = new Padrao();
+    PessoaDAO pessoaDao = new PessoaDAO();
 
     @Override
     public void salvar(DTO dto)  {
@@ -26,7 +25,7 @@ public class PessoaController implements Controller {
 
     public Object[] getDados(DTO o) {
         PessoaDTO dto = (PessoaDTO) o;
-        return new Object[]{dto.nomePessoa, dto.cpfPessoa, dto.ruaPessoa, dto.numeroPessoa, dto.ruaPessoa};
+        return new Object[]{dto.nomePessoa, dto.cpfPessoa, dto.rgPessoa, dto.numeroPessoa, dto.ruaPessoa};
     }
     public String [] getTituloColunas() {
         return new String[]{"Nome","CPF","RG","Número","Rua"};

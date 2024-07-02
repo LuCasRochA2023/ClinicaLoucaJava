@@ -11,15 +11,6 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="6d249" class="javax.swing.JPasswordField" binding="campoSenha">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
-        </constraints>
-        <properties/>
-      </component>
       <component id="fdbe3" class="javax.swing.JLabel" binding="senha">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -31,13 +22,14 @@
       </component>
       <component id="cb5ef" class="javax.swing.JTextField" binding="campoUsuario">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
-          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <columns value="30"/>
+          <columns value="20"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="68233" class="javax.swing.JLabel" binding="Titulo">
@@ -60,6 +52,18 @@
           <preferredSize width="105" height="34"/>
           <text value="Entrar"/>
           <verticalTextPosition value="3"/>
+        </properties>
+      </component>
+      <component id="6d249" class="javax.swing.JPasswordField" binding="campoSenha">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <columns value="20"/>
+          <text value=""/>
         </properties>
       </component>
     </children>

@@ -1,7 +1,12 @@
 package entidades.dao;
 
+import entidades.Pessoa;
+
 import java.util.List;
 
-public interface PessoaDAO {
-   public List listarNome(String nome);
+public class PessoaDAO implements InterfaceDao {
+    public void salvar(Object o) {
+        Padrao padrao = new Padrao();
+        padrao.salvar(o);
+    }
 }

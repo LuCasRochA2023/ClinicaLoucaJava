@@ -27,6 +27,6 @@ public class LoginDTO extends DTO {
         for (Login login : dados) {
             DadosDTO.add(Converte(login));
         }
-        return DadosDTO;
+        return DadosDTO; 
     }
 }

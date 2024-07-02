@@ -1,5 +1,6 @@
 package telaEntrada.telasTeste;
 
+import controller.LoginController;
 import dto.LoginDTO;
 import entidades.Login;
 import entidades.dao.LoginDAO;
@@ -7,6 +8,7 @@ import telaEntrada.CampoPrincipal;
 import telaEntrada.Frame;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class TelaTeste extends JFrame{
     private JPanel painel;
@@ -23,7 +25,8 @@ public class TelaTeste extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         add(painel).setVisible(true);
-        setSize(500,500);
+        setMinimumSize(new Dimension(700,500));
+        setSize(800 ,600);
         Funcionalidade();
     }
     public void Funcionalidade() {
@@ -31,10 +34,11 @@ public class TelaTeste extends JFrame{
             LoginDTO loginDTO = new LoginDTO();
             loginDTO.usuarioLogin = campoUsuario.getText();
             loginDTO.usuarioSenha = campoSenha.getText();
-            LoginDAO loginDAO = new LoginDAO();
-            Login login;
-            login = loginDTO.builder();
-            loginDAO.salvar(login);
+
+
+
+            LoginController loginController = new LoginController();
+            loginController.salvar(loginDTO);
             dispose();
             new Frame().setVisible(true);
         });
