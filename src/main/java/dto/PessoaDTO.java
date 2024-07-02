@@ -2,10 +2,10 @@ package dto;
 
 import entidades.Pessoa;
 
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
 public  class PessoaDTO extends DTO{
     public String nomePessoa;
     public String cpfPessoa;
@@ -13,6 +13,30 @@ public  class PessoaDTO extends DTO{
     public String ruaPessoa;
     public String sexoPessoa;
     public double numeroPessoa;
+
+    public String getNomePessoa() {
+        return nomePessoa;
+    }
+
+    public String getCpfPessoa() {
+        return cpfPessoa;
+    }
+
+    public String getRgPessoa() {
+        return rgPessoa;
+    }
+
+    public String getRuaPessoa() {
+        return ruaPessoa;
+    }
+
+    public String getSexoPessoa() {
+        return sexoPessoa;
+    }
+
+    public double getNumeroPessoa() {
+        return numeroPessoa;
+    }
 
     public Pessoa builder(){
         Pessoa pessoa = new Pessoa();

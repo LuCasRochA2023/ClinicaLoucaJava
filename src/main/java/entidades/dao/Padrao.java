@@ -29,8 +29,7 @@ public class Padrao {
     }
 
     public static List<Pessoa> listar(Object p) {
-        return em.createQuery("SELECT p FROM pessoa p WHERE p.nome LIKE :valor", Pessoa.class)
-                .setParameter("valor", "%" + p + "%")
+        return em.createQuery("SELECT p FROM pessoa p ", Pessoa.class)
                 .getResultList();
     }
 }

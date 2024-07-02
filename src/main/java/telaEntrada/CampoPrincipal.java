@@ -5,6 +5,7 @@ import dto.DTO;
 import dto.PessoaDTO;
 import entidades.dao.Padrao;
 import entidades.Pessoa;
+import entidades.dao.PessoaDAO;
 import util.Painelnterface;
 
 import javax.swing.*;
@@ -164,16 +165,25 @@ public class CampoPrincipal extends JPanel {
     public void Salvar() {
         botaoOk.addActionListener(e -> {
 
-            DTO dto = new PessoaDTO();
+            PessoaDTO dto = new PessoaDTO();
             PessoaController controller = new PessoaController();
-            Pessoa p = new Pessoa();
-            p.setNome(campoNome.getText());
-            p.setCpf(campoCPF.getText());
+
+            dto.nomePessoa = (campoNome.getText());
+            dto.cpfPessoa = (campoCPF.getText());
             double numero = Double.parseDouble(campoNumero.getText());
-            p.setNumero(numero);
-            p.setRg(campoRg.getText());
-            p.setRua(campoRua.getText());
-            controller.salvar(painelnterface.salvar());
+            dto.numeroPessoa = (numero);
+            dto.rgPessoa = (campoRg.getText());
+            dto.ruaPessoa = (campoRua.getText());
+            String generoSelecionado = "";
+            if (masculino.isSelected()) {
+                generoSelecionado = "Masculino";
+            } else if (feminino.isSelected()) {
+                generoSelecionado = "Feminino";
+            }
+            dto.sexoPessoa = (generoSelecionado);
+            Pessoa p = dto.builder();
+            Padrao padrao = new Padrao();
+            padrao.salvar(p);
 
         });
 
@@ -337,9 +347,8 @@ public class CampoPrincipal extends JPanel {
         gc.insets = new Insets(0,0,0,5);
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(botaoOk, gc);
-        add(painelnterface);
+
         PessoaController pessoaController = new PessoaController();
-        pessoaController.salvar(painelnterface.salvar());
         Salvar();
 
     }

@@ -26,7 +26,7 @@ public class Tabela extends JPanel {
         campo = new JTextField(50);
 
 
-            List <DTO> lista = pessoaController.listar();
+            lista = pessoaController.listar();
             PessoaDTO dto = new PessoaDTO();
 
             String[] col = pessoaController.getTituloColunas();

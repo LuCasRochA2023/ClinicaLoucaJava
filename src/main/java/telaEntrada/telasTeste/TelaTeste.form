@@ -2,30 +2,23 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="telaEntrada.telasTeste.TelaTeste">
   <grid id="27dc6" binding="painel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="500" height="612"/>
+      <xy x="20" y="20" width="549" height="612"/>
     </constraints>
-    <properties/>
+    <properties>
+      <alignmentX value="1.0"/>
+      <alignmentY value="1.0"/>
+      <doubleBuffered value="false"/>
+    </properties>
     <border type="none"/>
     <children>
-      <component id="68233" class="javax.swing.JLabel" binding="Titulo">
+      <component id="6d249" class="javax.swing.JPasswordField" binding="campoSenha">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <text value="Usuario"/>
-        </properties>
-      </component>
-      <component id="cb5ef" class="javax.swing.JTextField" binding="campoUsuario">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
         </constraints>
-        <properties>
-          <columns value="30"/>
-        </properties>
+        <properties/>
       </component>
       <component id="fdbe3" class="javax.swing.JLabel" binding="senha">
         <constraints>
@@ -36,24 +29,37 @@
           <text value="Senha"/>
         </properties>
       </component>
-      <component id="4f992" class="javax.swing.JTextField" binding="campoSenha">
+      <component id="cb5ef" class="javax.swing.JTextField" binding="campoUsuario">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
           <columns value="30"/>
         </properties>
       </component>
-      <component id="ab706" class="javax.swing.JButton" binding="entrarButton" custom-create="true" default-binding="true">
+      <component id="68233" class="javax.swing.JLabel" binding="Titulo">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.1" weighty="0.0" ipadx="1" ipady="1"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
+          <text value="Usuario"/>
+        </properties>
+      </component>
+      <component id="dcf52" class="javax.swing.JButton" binding="entrarButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <maximumSize width="84" height="34"/>
+          <minimumSize width="84" height="34"/>
+          <preferredSize width="105" height="34"/>
           <text value="Entrar"/>
+          <verticalTextPosition value="3"/>
         </properties>
       </component>
     </children>

@@ -26,7 +26,7 @@ public class PessoaController implements Controller {
 
     public Object[] getDados(DTO o) {
         PessoaDTO dto = (PessoaDTO) o;
-        return new Object[]{dto.ruaPessoa, dto.nomePessoa, dto.cpfPessoa, dto.rgPessoa, dto.numeroPessoa};
+        return new Object[]{dto.nomePessoa, dto.cpfPessoa, dto.ruaPessoa, dto.numeroPessoa, dto.ruaPessoa};
     }
     public String [] getTituloColunas() {
         return new String[]{"Nome","CPF","RG","Número","Rua"};
